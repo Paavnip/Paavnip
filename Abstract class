@@ -1,0 +1,51 @@
+// Abstract class representing a shape
+abstract class Shape {
+    public abstract double area();
+}
+
+// Concrete implementations of shapes
+class Circle extends Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public double area() {
+        return Math.PI * radius * radius;
+    }
+}
+
+class Rectangle extends Shape {
+    private double width;
+    private double height;
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    public double area() {
+        return width * height;
+    }
+}
+
+// A class that calculates the total area of shapes
+class AreaCalculator {
+    public double calculateArea(Shape[] shapes) {
+        double totalArea = 0;
+        for (Shape shape : shapes) {
+            totalArea += shape.area();
+        }
+        return totalArea;
+    }
+}
+
+// Main class to demonstrate OCP
+public class Main {
+    public static void main(String[] args) {
+        Shape[] shapes = {new Circle(5), new Rectangle(3, 4)};
+        AreaCalculator calculator = new AreaCalculator();
+        System.out.println("Total area: " + calculator.calculateArea(shapes));
+    }
+}
