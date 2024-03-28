@@ -1,0 +1,26 @@
+interface A {
+    void methodA();
+}
+
+interface B {
+    void methodB();
+}
+
+// Class C implementing both interfaces A and B
+class C implements A, B {
+    public void methodA() {
+        System.out.println("Inside methodA");
+    }
+
+    public void methodB() {
+        System.out.println("Inside methodB");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        C obj = new C();
+        obj.methodA();
+        obj.methodB();
+    }
+}
