@@ -1,0 +1,48 @@
+// Shape.java
+interface Shape {
+    double area();
+}
+
+// Rectangle.java
+class Rectangle implements Shape {
+    private double length;
+    private double width;
+
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    public double area() {
+        return length * width;
+    }
+}
+
+// Circle.java
+class Circle implements Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public double area() {
+        return Math.PI * radius * radius;
+    }
+}
+
+// AreaCalculator.java
+class AreaCalculator {
+    public double calculateArea(Shape shape) {
+        return shape.area();
+    }
+}
+
+// Main.java
+public class Main {
+    public static void main(String[] args) {
+        Shape rectangle = new Rectangle(5, 3);
+        Shape circle = new Circle(7);
+
+        AreaCalculator calculator = new AreaCalculator();
+        System.out.println("Area of Rectangle**⬤**
