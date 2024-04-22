@@ -1,0 +1,79 @@
+[4/22, 7:09 PM] Divya 🤍: public class Customer {
+    // Attributes
+    private String name;
+    private String email;
+    private String phoneNumber;
+    
+    // Constructor
+    public Customer() {
+        // Default constructor
+    }
+    
+    // Method to display customer info
+    public void displayInfo() {
+        System.out.println("Customer Name: " + name);
+        System.out.println("Email: " + email);
+        System.out.println("Phone Number: " + phoneNumber);
+    }
+    
+    // Getters and setters for attributes
+    public String getName() {
+        return name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public String getEmail() {
+        return email;
+    }
+    
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+    
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+    
+    public static void main(String[] args) {
+        // Instantiate a Customer object using default constructor
+        Customer customer = new Customer();
+        
+        // Set attributes
+        customer.setName("John Doe");
+        customer.setEmail("john@example.com");
+        customer.setPhoneNumber("123-456-7890");
+        
+        // Display customer info
+        customer.displayInfo();
+        
+        // Modify attributes
+        customer.setEmail("john.doe@example.com");
+        customer.setPhoneNumber("987-654-3210");
+        
+        // Display updated customer info
+        customer.displayInfo();
+    }
+}
+[4/22, 7:09 PM] Divya 🤍: Out put
+Customer Name: John Doe
+
+Email: john@example.com
+
+Phone Number: 123-456-7890
+
+Customer Name: John Doe
+
+Email: john.doe@example.com
+
+Phone Number: 987-654-3210
+
+
+
+=== Code Execution Successful ===
